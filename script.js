@@ -57,10 +57,6 @@ const updateGame = (p1, p2, gameState) => {
 }
 
 // ** Create the Player class which can create a player with all it's attributes and methods **
-// qazi = new Player('Qazi', 100, 7)
-// qazi.name 👉 'Qazi'
-// qazi.health 👉 100
-// qazi.attackDmg 👉 7
 class Player {
   constructor(name, health, attackDamage) {
     this.name = name;
@@ -148,18 +144,18 @@ class Game {
 }
 
 // ** Create 2 players using the player class **
-let swapnil = new Player('Swapnil', 100, 20)
-let craze = new Player('craze', 100, 20)
+let Player1 = new Player('Player 1', 100, 20)
+let Player2 = new Player('Player 2', 100, 20)
 
 // ** Save original Player Data into a variable in order to reset **
-let p1 = swapnil;
-let p2 = craze;
+let p1 = Player1;
+let p2 = Player2;
 
 // ** Create the game object from the Game class **
 let game = new Game()
 
 // ** Intialize the app by calling updateGame() **
-updateGame(swapnil, craze)
+updateGame(Player1, Player2)
 
 // ** Save intial isOver from the game object inside this variable **
 let gameState = game.isOver;
